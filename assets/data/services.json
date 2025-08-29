@@ -1,0 +1,46 @@
+[
+  {
+    "id": "event-staffing",
+    "title": "Event Staffing",
+    "description": "Experienced ushers, promoters, ticketing staff, and on-ground coordinators for concerts, festivals, and exhibitions.",
+    "bullets": [
+      "Ushers & registration desks",
+      "Ticketing & access control",
+      "Booth & stage support",
+      "VIP & backstage coordination"
+    ]
+  },
+  {
+    "id": "corporate-solutions",
+    "title": "Corporate Solutions",
+    "description": "Professional admin, reception, and brand ambassador staffing for offices, roadshows, and activations.",
+    "bullets": [
+      "Reception & admin support",
+      "Brand ambassadors",
+      "Product specialists",
+      "Multilingual team members"
+    ]
+  },
+  {
+    "id": "tourism-activations",
+    "title": "Tourism & Activations",
+    "description": "On-ground promoters, guides, and customer service reps for tourism boards, malls, and lifestyle events.",
+    "bullets": [
+      "Guides & info desks",
+      "Lead capture & surveys",
+      "Public-facing customer care",
+      "Retail/mall activations"
+    ]
+  },
+  {
+    "id": "custom-solutions",
+    "title": "Custom Workforce Solutions",
+    "description": "Tell us your goal \u2014 we'll build the right team and structure for your timeline and budget.",
+    "bullets": [
+      "Flexible headcount & hours",
+      "Rapid deployment",
+      "Compliance-minded operations",
+      "Bespoke briefs & training"
+    ]
+  }
+]
