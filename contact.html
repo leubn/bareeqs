@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact • Bareeqs</title>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Bareeqs — UAE-based recruitment & event staffing partner. Empowering People. Enabling Success." />
+<meta property="og:title" content="Bareeqs — Recruitment & Event Staffing in the UAE" />
+<meta property="og:description" content="Trusted partner for events, activations, and corporate staffing in the UAE." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0B1020" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="section">
+    <div class="container narrow">
+      <h1>Let’s Talk</h1>
+      <p>We’ll tailor a proposal after a short call or meeting. Reach out via the form, or use the quick links below.</p>
+      <div class="contact-quick">
+        <a id="contact-email" class="btn btn-secondary" href="#">Email Us</a>
+        <a id="contact-phone" class="btn btn-ghost" href="#">Call Us</a>
+      </div>
+
+      <form id="form" class="form card mt-24">
+        <label>Full Name
+          <input type="text" id="name" placeholder="Your name" required />
+        </label>
+        <label>Company
+          <input type="text" id="company" placeholder="Company name" />
+        </label>
+        <label>Email
+          <input type="email" id="email" placeholder="you@company.com" required />
+        </label>
+        <label>Phone
+          <input type="tel" id="phone" placeholder="+971…" />
+        </label>
+        <label>Project Brief
+          <textarea id="message" rows="6" placeholder="Tell us about your staffing needs…"></textarea>
+        </label>
+        <div class="row">
+          <button type="submit" class="btn btn-primary">Send</button>
+          <button type="button" class="btn btn-outline" id="copy-email">Copy Email</button>
+        </div>
+      </form>
+      <p class="hint">Prefer scheduling? Add your Calendly/Cal.com link in <code>assets/data/brand.json</code> and it will appear here.</p>
+      <div id="schedule-link" class="mt-16"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/brand.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = encodeURIComponent(document.getElementById('name').value);
+        const company = encodeURIComponent(document.getElementById('company').value);
+        const email = encodeURIComponent(document.getElementById('email').value);
+        const phone = encodeURIComponent(document.getElementById('phone').value);
+        const message = encodeURIComponent(document.getElementById('message').value);
+
+        const mailto = document.getElementById('contact-email').getAttribute('href');
+        const subject = encodeURIComponent('New Inquiry from ' + (decodeURIComponent(name) || 'Website'));
+        const body = encodeURIComponent(
+          `Name: ${decodeURIComponent(name)}\nCompany: ${decodeURIComponent(company)}\nEmail: ${decodeURIComponent(email)}\nPhone: ${decodeURIComponent(phone)}\n\nProject Brief:\n${decodeURIComponent(message)}`
+        );
+        window.location.href = mailto + `?subject=${subject}&body=${body}`;
+      });
+
+      // Copy email to clipboard
+      document.getElementById('copy-email').addEventListener('click', function() {
+        const emailLink = document.getElementById('contact-email');
+        const email = emailLink.href.replace('mailto:', '');
+        navigator.clipboard.writeText(email).then(() => {
+          alert('Email copied: ' + email);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
