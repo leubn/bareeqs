@@ -10,29 +10,5 @@
       "3,000+ attendees serviced",
       "Under 48 hours turnaround from brief to deployment"
     ]
-  },
-  {
-    "id": "mall-activation",
-    "year": "2025",
-    "location": "Abu Dhabi, UAE",
-    "title": "Retail Mall Activation",
-    "summary": "Deployed multilingual promoters and data capture teams across a 3\u2011day brand activation.",
-    "metrics": [
-      "8 promoters per day",
-      "Lead capture rate 32%",
-      "Bi-lingual Arabic/English"
-    ]
-  },
-  {
-    "id": "corporate-summit",
-    "year": "2024",
-    "location": "Dubai, UAE",
-    "title": "Corporate Innovation Summit",
-    "summary": "Registration, speaker support, and VIP assistance for 1,200\u2011delegate conference.",
-    "metrics": [
-      "20 staff across 2 days",
-      "< 2 min average check-in",
-      "Dedicated VIP desk"
-    ]
   }
 ]
